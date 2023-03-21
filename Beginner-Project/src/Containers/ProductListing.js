@@ -19,7 +19,7 @@ const ProductListing = () => {
 
     useEffect(() => {
         fetchProducts()
-    },)
+    }, [])
 
     console.log("Products: ", products)
     return (
