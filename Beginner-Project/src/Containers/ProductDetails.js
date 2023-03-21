@@ -1,9 +1,9 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
 const ProductDetails = () => {
-  const {productId}=useParams()
+  const { productId } = useParams()
   console.log(productId);
   return (
     <div>
