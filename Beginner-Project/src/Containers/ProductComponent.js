@@ -7,7 +7,7 @@ const ProductComponent = () => {
         const { id, title, image, price, category } = product
         return (
             <div className="four column wide" key={id}>
-                <Link to={`/products/${id}`}>
+                <Link to={`/product/${id}`}>
                 <div className="ui link cards">
                     <div className="card">
                         <div className="image">
