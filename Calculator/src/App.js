@@ -25,12 +25,20 @@ function reducer(state, { type, payload }) {
         ...state,
         currentOperand: `${state.currentOperand || ""}${payload.digit}`,
       }
-      case ACTIONS.CHOOSE_OPERATION:
-        if (state.currentOperand == null && state.previousOperand == null) {
-          return state
+    case ACTIONS.CHOOSE_OPERATION:
+      if (state.currentOperand == null && state.previousOperand == null) {
+        return state
+      }
+      if (state.previousOperand == null) {
+        return {
+          ...state,
+          operation: payload.operation,
+          previousOperand: state.currentOperand,
+          currentOperand: null,
         }
-      case ACTIONS.CLEAR:
-        return {}
+      }
+    case ACTIONS.CLEAR:
+      return {}
   }
 }
 
@@ -44,7 +52,7 @@ function App() {
       </div>
       <button className="span-two" onClick={() => dispatch({ type: ACTIONS.CLEAR })} >
         AC
-        </button>
+      </button>
       <button>DEL</button>
       <OperationButton operation="/" dispatch={dispatch} />
       <DigitButton digit="1" dispatch={dispatch} />
