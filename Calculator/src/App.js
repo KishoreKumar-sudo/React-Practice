@@ -1,5 +1,6 @@
 import { useReducer } from "react"
 import DigitButton from "./DigitButton"
+import OperationButton from "./OperationButton"
 import "./styles.css"
 //reducer which allows us to manage all our state,
 // when im dealing with action break dat into type & payload
