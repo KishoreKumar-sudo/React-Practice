@@ -37,28 +37,37 @@ function reducer(state, { type, payload }) {
           currentOperand: null,
         }
       }
-      return{
+      return {
         ...state,
-        previousOperand:evaluate(state),
-        operation:payload.operation,
-        currentOperand:null
+        previousOperand: evaluate(state),
+        operation: payload.operation,
+        currentOperand: null
       }
 
     case ACTIONS.CLEAR:
       return {}
   }
 }
-function evaluate(currentOperand,previousOperand,operation){
-  const prev =parseFloat(previousOperand)
-  const current=parseFloat(currentOperand)
-  if(isNaN(prev) || isNaN(current)) return ""
+function evaluate(currentOperand, previousOperand, operation) {
+  const prev = parseFloat(previousOperand)
+  const current = parseFloat(currentOperand)
+  if (isNaN(prev) || isNaN(current)) return ""
   let computation = ""
-  switch (key) {
-    case value:
-      
+  switch (operation) {
+    case "+":
+      computation = prev + current
       break;
-
+    case "-":
+      computation = prev - current
+      break;
+      case "*":
+      computation = prev * current
+      break;
+      case "/":
+      computation = prev / current
+      break;
   }
+  return computation.toString()
 }
 
 function App() {
