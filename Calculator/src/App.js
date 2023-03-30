@@ -29,6 +29,12 @@ function reducer(state, { type, payload }) {
       if (state.currentOperand == null && state.previousOperand == null) {
         return state
       }
+      if(state.currentOperand == null){
+        return{
+          ...state,
+          operation:payload.operation,
+        }
+      }
       if (state.previousOperand == null) {
         return {
           ...state,
@@ -41,14 +47,13 @@ function reducer(state, { type, payload }) {
         ...state,
         previousOperand: evaluate(state),
         operation: payload.operation,
-        currentOperand: null
+        currentOperand: null,
       }
-
     case ACTIONS.CLEAR:
       return {}
   }
 }
-function evaluate(currentOperand, previousOperand, operation) {
+function evaluate({currentOperand, previousOperand, operation}) {
   const prev = parseFloat(previousOperand)
   const current = parseFloat(currentOperand)
   if (isNaN(prev) || isNaN(current)) return ""
@@ -60,10 +65,10 @@ function evaluate(currentOperand, previousOperand, operation) {
     case "-":
       computation = prev - current
       break;
-      case "*":
+    case "*":
       computation = prev * current
       break;
-      case "/":
+    case "/":
       computation = prev / current
       break;
   }
