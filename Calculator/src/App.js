@@ -57,9 +57,7 @@ function evaluate(currentOperand,previousOperand,operation){
     case value:
       
       break;
-  
-    default:
-      break;
+
   }
 }
 
