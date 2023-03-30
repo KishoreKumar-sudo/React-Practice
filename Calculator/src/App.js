@@ -1,8 +1,9 @@
 import { useReducer } from "react"
+import DigitButton from "./DigitButton"
 import "./styles.css"
 //reducer which allows us to manage all our state,
 // when im dealing with action break dat into type & payload
-const ACTIONS = {
+export const ACTIONS = {
   ADD_DIGIT: 'add-digit',
   CHOOSE_OPERATION: 'choose-operation',
   CLEAR: 'clear',
