@@ -1,4 +1,4 @@
-import { ACTIONS } from './App'
+import { ACTIONS } from './App';
 
 export default function DigitButton({ dispatch, digit }) {
     return (<button
@@ -6,4 +6,4 @@ export default function DigitButton({ dispatch, digit }) {
         {digit}
     </button>
     )
-}
+};
