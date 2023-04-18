@@ -2,12 +2,12 @@ FED:React
 BED:SB
 DB:Mongo-DB
 Reason behind the Monogodb is very much popular?
- When SQL got famous @ dat pt the usage of memory wasteage is very costly so we have to make sure that we have to use minimum storage is required & we can install maximum data in DB.
+    When SQL got famous @ dat pt the usage of memory wasteage is very costly so we have to make sure that we have to use minimum storage is required & we can install maximum data in DB.
 that's why the sql is more complicated to use.
- In SQL, we have tables while in noSQL we have documents.
+    In SQL, we have tables while in noSQL we have documents.
  
-   SQL COncepts      noSQL Concepts 
-  database               database
+SQL COncepts      noSQL Concepts 
+  database              database
   tables              collections
   rows               documents(BSON)
   columns                fields
