@@ -6,4 +6,8 @@ Reason behind the Monogodb is very much popular?
 that's why the sql is more complicated to use.
  In SQL, we have tables while in noSQL we have documents.
  
-SQL COncepts            noSQL Concepts 
+   SQL COncepts      noSQL Concepts 
+  database               database
+  tables              collections
+  rows               documents(BSON)
+  columns                fields
